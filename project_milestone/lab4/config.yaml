@@ -1,0 +1,42 @@
+dataset:
+  name: adult
+  version: 2
+  expected_rows: 48842
+  expected_columns: 15
+random_seed: 42
+split:
+  test_size: 0.3
+  stratified: true
+missing_values:
+  token: '?'
+  categorical_imputation: most_frequent
+  numeric_imputation: median
+outliers:
+  lower_quantile: 0.01
+  upper_quantile: 0.99
+  fit_on: training_only
+duplicates:
+  remove_from: training_only
+  keep_test_untouched: true
+feature_engineering:
+  capital_net: capital-gain - capital-loss
+  hours_per_age: hours-per-week / (age - 16)
+model:
+  name: LogisticRegression
+  max_iter: 2000
+  metrics:
+  - accuracy
+  - f1
+paths:
+  raw_data: data/adult_raw.csv
+  results: results
+reproducibility:
+  random_seed: 42
+  processed_dataset_sha256: c62bdb50551f0dfbc420d2cfd0f5acbdc06f23c8ec4382c7debb9b62e532f07b
+  hash_method: SHA256 over engineered preprocessing outputs for train and test in
+    CSR form, plus train and test labels.
+  raw_rows: 48842
+  raw_columns: 15
+  train_rows_after_deduplication: 34165
+  test_rows_untouched: 14653
+  training_duplicates_removed: 24

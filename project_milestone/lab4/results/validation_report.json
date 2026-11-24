@@ -1,0 +1,85 @@
+{
+  "rows": 48842,
+  "columns": 15,
+  "expected_shape": [
+    48842,
+    15
+  ],
+  "columns_match": true,
+  "numeric_type_violations": {
+    "age": 0,
+    "fnlwgt": 0,
+    "education-num": 0,
+    "capital-gain": 0,
+    "capital-loss": 0,
+    "hours-per-week": 0
+  },
+  "range_violations": {
+    "age": {
+      "count": 0,
+      "allowed": [
+        17,
+        90
+      ],
+      "observed_min": 17,
+      "observed_max": 90
+    },
+    "hours-per-week": {
+      "count": 0,
+      "allowed": [
+        1,
+        99
+      ],
+      "observed_min": 1,
+      "observed_max": 99
+    },
+    "capital-gain": {
+      "count": 0,
+      "allowed": [
+        0,
+        99999
+      ],
+      "observed_min": 0,
+      "observed_max": 99999
+    },
+    "capital-loss": {
+      "count": 0,
+      "allowed": [
+        0,
+        4356
+      ],
+      "observed_min": 0,
+      "observed_max": 4356
+    }
+  },
+  "question_mark_counts": {
+    "workclass": 0,
+    "education": 0,
+    "marital-status": 0,
+    "occupation": 0,
+    "relationship": 0,
+    "race": 0,
+    "sex": 0,
+    "native-country": 0,
+    "income": 0
+  },
+  "null_counts": {
+    "age": 0,
+    "fnlwgt": 0,
+    "education-num": 0,
+    "capital-gain": 0,
+    "capital-loss": 0,
+    "hours-per-week": 0,
+    "workclass": 2799,
+    "education": 0,
+    "marital-status": 0,
+    "occupation": 2809,
+    "relationship": 0,
+    "race": 0,
+    "sex": 0,
+    "native-country": 857,
+    "income": 0
+  },
+  "exact_duplicate_rows": 52,
+  "unknown_income_labels": []
+}

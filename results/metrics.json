@@ -1,0 +1,91 @@
+{
+  "quantization_backend": "onednn",
+  "device": "CPU",
+  "manual_quantization": [
+    {
+      "bits": 8,
+      "method": "per_tensor",
+      "MSE": 1.159386670224194e-06
+    },
+    {
+      "bits": 8,
+      "method": "per_channel",
+      "MSE": 5.51422715489025e-07
+    },
+    {
+      "bits": 4,
+      "method": "per_tensor",
+      "MSE": 0.00038705201586708426
+    },
+    {
+      "bits": 4,
+      "method": "per_channel",
+      "MSE": 0.00017496263899374753
+    },
+    {
+      "bits": 2,
+      "method": "per_tensor",
+      "MSE": 0.02201888896524906
+    },
+    {
+      "bits": 2,
+      "method": "per_channel",
+      "MSE": 0.009221959859132767
+    }
+  ],
+  "comparison": [
+    {
+      "variant": "baseline",
+      "accuracy_percent": 92.17,
+      "latency_ms": 1.0813000000098327,
+      "size_MB": 3.674626350402832,
+      "parameters": 962314
+    },
+    {
+      "variant": "pruned",
+      "accuracy_percent": 92.48,
+      "latency_ms": 0.46344999998382264,
+      "size_MB": 1.492619514465332,
+      "parameters": 390410
+    },
+    {
+      "variant": "distilled",
+      "accuracy_percent": 87.96,
+      "latency_ms": 0.30759999992824305,
+      "size_MB": 0.37884998321533203,
+      "parameters": 98442
+    },
+    {
+      "variant": "dynamic_quant",
+      "accuracy_percent": 92.14,
+      "latency_ms": 1.3020500000493485,
+      "size_MB": 1.9812555313110352,
+      "parameters": 962314
+    },
+    {
+      "variant": "static_quant",
+      "accuracy_percent": 92.16,
+      "latency_ms": 0.9244999998827552,
+      "size_MB": 0.9404325485229492,
+      "parameters": 962314
+    },
+    {
+      "variant": "pruned+quant",
+      "accuracy_percent": 92.44,
+      "latency_ms": 0.7517500000631117,
+      "size_MB": 0.6429986953735352,
+      "parameters": 390410
+    },
+    {
+      "variant": "distilled+quant",
+      "accuracy_percent": 88.06,
+      "latency_ms": 0.6043500000032509,
+      "size_MB": 0.16570377349853516,
+      "parameters": 98442
+    }
+  ],
+  "onnx_max_absolute_error": 1.9073486328125e-06,
+  "onnx_runtime_latency_ms": 0.3328500000634449,
+  "onnx_size_MB": 3.6735382080078125,
+  "calibration_images": 500
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "UCI Adult Census Income",
+  "random_seed": 42,
+  "test_rows": 14653,
+  "training_duplicates_removed": 24,
+  "baseline_results": [
+    {
+      "model": "LogisticRegression",
+      "features": "without_engineered_features",
+      "accuracy": 0.8539548215382515,
+      "f1": 0.6601016518424396
+    },
+    {
+      "model": "LogisticRegression",
+      "features": "with_engineered_features",
+      "accuracy": 0.8577765645260357,
+      "f1": 0.6696258719086874
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "validation": {
+    "rows": 48842,
+    "columns": 15,
+    "expected_shape": [
+      48842,
+      15
+    ],
+    "columns_match": true,
+    "numeric_type_violations": {
+      "age": 0,
+      "fnlwgt": 0,
+      "education-num": 0,
+      "capital-gain": 0,
+      "capital-loss": 0,
+      "hours-per-week": 0
+    },
+    "range_violations": {
+      "age": {
+        "count": 0,
+        "allowed": [
+          17,
+          90
+        ],
+        "observed_min": 17,
+        "observed_max": 90
+      },
+      "hours-per-week": {
+        "count": 0,
+        "allowed": [
+          1,
+          99
+        ],
+        "observed_min": 1,
+        "observed_max": 99
+      },
+      "capital-gain": {
+        "count": 0,
+        "allowed": [
+          0,
+          99999
+        ],
+        "observed_min": 0,
+        "observed_max": 99999
+      },
+      "capital-loss": {
+        "count": 0,
+        "allowed": [
+          0,
+          4356
+        ],
+        "observed_min": 0,
+        "observed_max": 4356
+      }
+    },
+    "question_mark_counts": {
+      "workclass": 0,
+      "education": 0,
+      "marital-status": 0,
+      "occupation": 0,
+      "relationship": 0,
+      "race": 0,
+      "sex": 0,
+      "native-country": 0,
+      "income": 0
+    },
+    "null_counts": {
+      "age": 0,
+      "fnlwgt": 0,
+      "education-num": 0,
+      "capital-gain": 0,
+      "capital-loss": 0,
+      "hours-per-week": 0,
+      "workclass": 2799,
+      "education": 0,
+      "marital-status": 0,
+      "occupation": 2809,
+      "relationship": 0,
+      "race": 0,
+      "sex": 0,
+      "native-country": 857,
+      "income": 0
+    },
+    "exact_duplicate_rows": 52,
+    "unknown_income_labels": []
+  },
+  "label_quality_audit": {
+    "conflicting_feature_groups": 5,
+    "rows_in_conflicting_groups": 10,
+    "definition": "Identical values across all 14 features but different income labels."
+  },
+  "training_duplicates_removed": 24,
+  "test_rows_untouched": 14653,
+  "baseline_results": [
+    {
+      "model": "LogisticRegression",
+      "features": "without_engineered_features",
+      "accuracy": 0.8539548215382515,
+      "f1": 0.6601016518424396
+    },
+    {
+      "model": "LogisticRegression",
+      "features": "with_engineered_features",
+      "accuracy": 0.8577765645260357,
+      "f1": 0.6696258719086874
+    }
+  ],
+  "processed_dataset_sha256": "c62bdb50551f0dfbc420d2cfd0f5acbdc06f23c8ec4382c7debb9b62e532f07b",
+  "manual_review_status": "PENDING"
+}

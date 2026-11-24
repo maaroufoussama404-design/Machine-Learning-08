@@ -1,0 +1,5 @@
+{
+  "conflicting_feature_groups": 5,
+  "rows_in_conflicting_groups": 10,
+  "definition": "Identical values across all 14 features but different income labels."
+}

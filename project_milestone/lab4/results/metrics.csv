@@ -1,0 +1,3 @@
+model,features,accuracy,f1
+LogisticRegression,without_engineered_features,0.8539548215382515,0.6601016518424396
+LogisticRegression,with_engineered_features,0.8577765645260357,0.6696258719086874
